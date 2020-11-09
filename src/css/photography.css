@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Raiderfont';
+  src: local('Raiderfont'), url('../fonts/Raiderfont.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -42,16 +47,35 @@ ul {
   align-items: center;
   height: 80px;
   padding: 0 20px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
 }
 
-.nav ul li {
+.nav ul li a {
   display: inline-block;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-size: 8px;
+  font-size: 15px;
   font-weight: 600;
   padding: 0 30px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav ul li a:hover {
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 0 30px;
+  text-decoration: none;
+  cursor: pointer;
+  color: antiquewhite;
 }
 
 .nav .logo {
@@ -82,6 +106,7 @@ ul {
 }
 
 .nav .profile .img {
+  background-image: url('../../assets/profile.jpg');
   background-position: 50%;
   background-size: cover;
   height: 30px;
@@ -101,7 +126,7 @@ ul {
   height: 500px;
   width: 0;
   position: relative;
-  top: -70px;
+  top: -100px;
 }
 
 .info {
@@ -120,7 +145,7 @@ ul {
   font-size: 15px;
   font-weight: 600;
   position: relative;
-  top: -90px;
+  top: -100px;
 }
 
 .info i {
@@ -135,7 +160,7 @@ ul {
 }
 
 .text h1 {
-  font-size: 80px;
+  font-size: 85px;
   color: #fff;
   text-transform: uppercase;
 }
