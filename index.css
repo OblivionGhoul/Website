@@ -21,7 +21,7 @@ body::-webkit-scrollbar {
   box-sizing: border-box;
   height: 100%;
   background-color: #3e3e3e;
-  background-image: url("../../assets/wave_light.svg");
+  background-image: url("./assets/wave_light.svg");
   background-repeat: no-repeat;
   background-position-y: bottom;
   padding-top: 50px;
@@ -29,7 +29,7 @@ body::-webkit-scrollbar {
 
 #secondary-content {
   background-color: #eaeaea;
-  background-image: url("../../assets/wave_dark.svg");
+  background-image: url("./assets/wave_dark.svg");
   display: flex;
   justify-content: space-evenly;
 }
