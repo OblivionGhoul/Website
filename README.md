@@ -1,2 +1,2 @@
 # Website (Work In Progress)
-https://love-master.github.io/website/
+http://oblivionghoul.com/
