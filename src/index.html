@@ -1,64 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OblivionGhoul</title>
-    <script src="https://kit.fontawesome.com/af0b4b39bc.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <div id="main-content">
-      <nav>
-        <ul>
-          <a href="#">Home</a>
-          <a href="./src/pages/discordbot.html">Discord Bot</a>
-          <a href="./src/pages/photography.html">Photography & Videography</a>
-          <a href="./src/pages/pricing.html">Pricing</a>
-          <a href="./src/pages/test.html">Test</a>
-        </ul>
-        <section>
-          <a class="fab fa-github" href="https://github.com/love-master"></a>
-          <a class="fab fa-discord" href="https://discord.com/invite/VNAQrkQ"></a>
-          <a class="fab fa-youtube" href="https://www.youtube.com/channel/UCsvpxb0I459H_D6TRwQB1bg/featured?view_as=subscriber"></a>
-        </section>
-      </nav>
-      <section class="content-body">
-        <aside>
-          <h1>Welcome to <br> OblivionGhoul's Website!</h1>
-          <div id="button">
-            <a href="#" class="main-button">Learn More</a>
-          </div>
-        </aside>
-        <img src="./assets/skull.png" width="275px" />
-      </section>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Home</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 30px 10%;
+      background-color: #24252a;
+    }
+
+    .logo {
+      margin-right: auto;
+      color: white;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    .nav__links {
+      list-style: none;
+      display: flex;
+    }
+
+    .nav__links a,
+    .cta,
+    .overlay__content a {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      color: #edf0f1;
+      text-decoration: none;
+    }
+
+    .nav__links li {
+      padding: 0px 20px;
+    }
+
+    .nav__links li a {
+      transition: all 0.3s ease 0s;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav__links li a:hover {
+      color: #0088a9;
+      text-decoration: none;
+    }
+
+    .cta {
+      margin-left: 20px;
+      padding: 9px 25px;
+      background-color: rgba(0, 136, 169, 1);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+    }
+
+    .cta:hover {
+      background-color: rgba(0, 136, 169, 0.8);
+    }
+
+    /* Mobile Nav */
+
+    .menu {
+      display: none;
+    }
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      background-color: #24252a;
+      overflow-x: hidden;
+      transition: all 0.5s ease 0s;
+    }
+
+    .overlay--active {
+      width: 100%;
+    }
+
+    .overlay__content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay a {
+      padding: 15px;
+      font-size: 36px;
+      display: block;
+      transition: all 0.3s ease 0s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #0088a9;
+    }
+
+    .overlay .close {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+      color: #edf0f1;
+      cursor: pointer;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px;
+      }
+
+      .overlay .close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+
+      .nav__links,
+      .cta {
+        display: none;
+      }
+
+      .menu {
+        display: initial;
+      }
+    }
+
+    /* Website Message */
+    .main h1 {
+      color: #000a44;
+      text-align: center;
+      margin-top: 50px;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .main p {
+      color: #000a44;
+      text-align: center;
+      margin-top: 50px;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .main img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a class="logo">OblivionGhoul</a>
+    <nav>
+      <ul class="nav__links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Discord Bot</a></li>
+        <li><a href="#">Photo & Video</a></li>
+        <li><a href="#">Pricing</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="#">Support</a>
+    <p class="menu cta">Menu</p>
+  </header>
+  <div id="mobile__menu" class="overlay">
+    <a class="close">&times;</a>
+    <div class="overlay__content">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Discord Bot</a></li>
+      <li><a href="#">Photo & Video</a></li>
+      <li><a href="#">Pricing</a></li>
     </div>
-    <footer>
-      <section id="footer-links-container">
-        <section>
-          <h1>Support</h1>
-          <ul>
-            <li>Join my discord server</li>
-            <li>OblivionGhoul@gmail.com</li>
-          </ul>
-        </section>
-        <section>
-          <h1>Products & Services</h1>
-          <ul>
-            <li>Discord Bot</li>
-            <li>Visual Design</li>
-            <li>Gaming</li>
-            <li>Video Production</li>
-            <li>Photography</li>
-          </ul>
-        </section>
-      </section>
-      <section id="footer-icons">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-linkedin"></i>
-      </section>
-    </footer>
-  </body>
+  </div>
+  <script type="text/javascript" src="../src/js/navbar.js"></script>
+</body>
+
+<body class="main">
+  <h1>This Website Is Currently Under Maintenance!</h1>
+  <p>Please check back soon.</p>
+  <img src="../assets/skull.png" width="200">
+</body>
+
 </html>
