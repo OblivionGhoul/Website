@@ -208,3 +208,85 @@ ul {
   margin: 0 10px 0 -78px;
   transform: translateY(-3px);
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    background: fixed;
+    margin: 0 auto;
+    border: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .left {
+    background: #B3B4AF;
+    left: 0%;
+    width: 0%;
+  }
+  
+  .right {
+    background: #191921;
+    right: 0%;
+    width: 0%;
+  }
+  
+  .nav ul li a {
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .text {
+    position: absolute;
+    top: 20%;
+    transform: translateY(-20%);
+    margin-left: 10px;
+  }
+  
+  .text h1 {
+    font-size: 40px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .img-wrapper .karina {
+    background-image: url('../../assets/antelope.jpg');
+    background-size: contain;
+    height: 260px;
+    background-repeat: no-repeat;
+    width: 0;
+    position: relative;
+    top: -200px;
+    left: -170px;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 0;
+    left: 180px;
+    padding: 0 10px;
+  }
+  
+  .info ul li {
+    display: inline-block;
+    padding: 20px 25px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 300;
+    position: relative;
+    top: -200px;
+    left: -190px
+  }
+  
+  .info i {
+    font-size: 10px;
+  }
+}
